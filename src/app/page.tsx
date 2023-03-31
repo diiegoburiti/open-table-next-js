@@ -1,91 +1,75 @@
-import Image from 'next/image'
-import { Inter } from 'next/font/google'
-import styles from './page.module.css'
+'use client'
 
-const inter = Inter({ subsets: ['latin'] })
+import { Link } from '@chakra-ui/next-js'
+import {
+  Button,
+  Flex,
+  Container,
+  Box,
+  Heading,
+  Input,
+  Image,
+  Text,
+  Card,
+  CardHeader,
+  CardBody
+} from '@chakra-ui/react'
 
-export default function Home() {
+export default function Page() {
   return (
-    <main className={styles.main}>
-      <div className={styles.description}>
-        <p>
-          Get started by editing&nbsp;
-          <code className={styles.code}>src/app/page.tsx</code>
-        </p>
-        <div>
-          <a
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{' '}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className={styles.vercelLogo}
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
-        </div>
-      </div>
+    <Container
+      maxWidth="100%"
+      width="100vw"
+      display="flex"
+      flexDirection="column"
+      justifyContent="center"
+      alignItems="center"
+    >
+      <Flex width="80%" justifyContent="space-between" mt="8px">
+        <Heading as="h2" color="gray.800" fontWeight="bold">
+          Open Table
+        </Heading>
+        <Flex gap="12px">
+          <Button>Sing In</Button>
+          <Button colorScheme="blue">Sing Up</Button>
+        </Flex>
+      </Flex>
 
-      <div className={styles.center}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-        <div className={styles.thirteen}>
-          <Image src="/thirteen.svg" alt="13" width={40} height={31} priority />
-        </div>
-      </div>
+      <Box width="80%" bg="blue.800" padding="60px">
+        <Heading as="h3" textAlign="center" color="whiteAlpha.900" mb="24px">
+          Find your table for any occasion
+        </Heading>
+        <Flex gap="6px" w="62%" margin="auto">
+          <Input type="search" placeholder="State, city or town" />
+          <Button colorScheme="red" w="30%">
+            {"Let's go"}
+          </Button>
+        </Flex>
+      </Box>
 
-      <div className={styles.grid}>
-        <a
-          href="https://beta.nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={inter.className}>
-            Docs <span>-&gt;</span>
-          </h2>
-          <p className={inter.className}>
-            Find in-depth information about Next.js features and API.
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={inter.className}>
-            Templates <span>-&gt;</span>
-          </h2>
-          <p className={inter.className}>Explore the Next.js 13 playground.</p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={inter.className}>
-            Deploy <span>-&gt;</span>
-          </h2>
-          <p className={inter.className}>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
-    </main>
+      <Flex w="80%">
+        <Card padding="4px" borderRadius="0" w="200px">
+          <Image
+            src="gibbresh.png"
+            fallbackSrc="https://via.placeholder.com/150"
+          />
+          <Heading as="h4" fontSize="18px" p="0" my="14px">
+            Milestones Grill
+          </Heading>
+          <CardBody p="0" display="flex" flexDirection="column" gap="8px">
+            <Flex gap="8px">
+              <Text>*****</Text>
+              <Text>77 reviews</Text>
+            </Flex>
+            <Flex gap="8px">
+              <Text>Mexican</Text>
+              <Text>$$$$</Text>
+              <Text>Toronto</Text>
+            </Flex>
+            <Text fontWeight="bold">Booked 3 times today</Text>
+          </CardBody>
+        </Card>
+      </Flex>
+    </Container>
   )
 }
