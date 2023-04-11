@@ -1,6 +1,5 @@
 import { Header } from 'components/header'
 import { NavBar } from 'components/navBar'
-import Link from 'next/link'
 
 export default function Search() {
   return (
