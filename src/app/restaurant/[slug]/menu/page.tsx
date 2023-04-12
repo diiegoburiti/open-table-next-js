@@ -1,5 +1,6 @@
 import { Banner } from 'components/Banner'
 import { NavBar } from 'components/NavBar'
+import { RestaurantNavBar } from 'components/RestaurantNavBar'
 import Link from 'next/link'
 
 export default function RestaurantMenu() {
@@ -11,18 +12,8 @@ export default function RestaurantMenu() {
         {/* DESCRIPTION PORTION */}
         <div className="flex m-auto w-2/3 justify-between items-start 0 -mt-11">
           <div className="bg-white w-[100%] rounded p-3 shadow">
-            {/* RESAURANT NAVBAR */}
-            <nav className="flex text-reg border-b pb-2">
-              {/* TODO: LEAVE IT DYNAMICALLY */}
-              <Link href="/restaurant/lorem-ipsum" className="mr-7">
-                Overview
-              </Link>
-              {/* TODO: LEAVE IT DYNAMICALLY */}
-              <Link href="/restaurant/lorem-ipsum/menu" className="mr-7">
-                Menu
-              </Link>
-            </nav>
-            {/* RESAURANT NAVBAR */} {/* MENU */}
+            <RestaurantNavBar />
+            {/* MENU */}
             <main className="bg-white mt-5">
               <div>
                 <div className="mt-4 pb-1 mb-1">

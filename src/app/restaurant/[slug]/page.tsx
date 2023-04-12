@@ -1,6 +1,6 @@
-import Link from 'next/link'
 import { Banner } from 'components/Banner'
 import { NavBar } from 'components/NavBar'
+import { RestaurantNavBar } from 'components/RestaurantNavBar'
 
 export default function RestaurantDetails() {
   return (
@@ -10,18 +10,8 @@ export default function RestaurantDetails() {
         <Banner /> {/* DESCRIPTION PORTION */}
         <div className="flex m-auto w-2/3 justify-between items-start 0 -mt-11">
           <div className="bg-white w-[70%] rounded p-3 shadow">
-            {/* RESTAURANT NAVBAR */}
-            <nav className="flex text-reg border-b pb-2">
-              {/* TODO: LEAVE IT DYNAMICALLY */}
-              <Link href="/restaurant/lorem-ipsum" className="mr-7">
-                Overview
-              </Link>
-              {/* TODO: LEAVE IT DYNAMICALLY */}
-              <Link href="/restaurant/lorem-ipsum/menu" className="mr-7">
-                Menu
-              </Link>
-            </nav>
-            {/* RESTAURANT NAVBAR */} {/* TITLE */}
+            <RestaurantNavBar />
+            {/* TITLE */}
             <div className="mt-4 border-b pb-6">
               <h1 className="font-bold text-6xl">Milesstone Grill</h1>
             </div>
