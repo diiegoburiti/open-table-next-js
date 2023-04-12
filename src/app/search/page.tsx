@@ -1,7 +1,7 @@
-import { Header } from 'components/header'
-import { NavBar } from 'components/navBar'
-import { RestaurantCard } from 'components/restaurantCard'
-import { SearchSideBar } from 'components/searchSideBar'
+import { Header } from 'components/Header'
+import { NavBar } from 'components/NavBar'
+import { RestaurantCard } from 'components/RestaurantCard'
+import { SearchSideBar } from 'components/SearchSideBar'
 
 export default function Search() {
   return (

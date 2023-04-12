@@ -1,5 +1,5 @@
-import { NavBar } from 'components/navBar'
-import { Header } from 'components/header'
+import { NavBar } from 'components/NavBar'
+import { Header } from 'components/Header'
 import { RestaurantCard } from 'components/restaurantCard'
 
 export default function Page() {

@@ -1,5 +1,5 @@
-import { Banner } from 'components/banner'
-import { NavBar } from 'components/navBar'
+import { Banner } from 'components/Banner'
+import { NavBar } from 'components/NavBar'
 import Link from 'next/link'
 
 export default function RestaurantMenu() {
