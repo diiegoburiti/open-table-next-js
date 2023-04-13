@@ -140,7 +140,8 @@ export default function RestaurantDetails() {
             </div>
           </div>
         </div>
-        {/* DESCRIPTION PORTION */} {/* RESERVATION CARD PORTION */}{' '}
+        {/* DESCRIPTION PORTION */} {/* RESERVATION CARD PORTION */}
+        <h1>Reservation card</h1>
         {/* RESERVATION
     CARD PORTION */}
       </main>
