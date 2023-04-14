@@ -1,4 +1,3 @@
-import { Banner } from 'components/Banner'
 import { RestaurantNavBar } from 'components/RestaurantNavBar'
 
 const Description = () => (
@@ -32,7 +31,6 @@ const Description = () => (
 export default function RestaurantMenu() {
   return (
     <>
-      <Banner />
       <Description />
     </>
   )
