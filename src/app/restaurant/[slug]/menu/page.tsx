@@ -1,6 +1,6 @@
 import { Banner } from 'components/Banner'
-import { NavBar } from 'components/NavBar'
 import { RestaurantNavBar } from 'components/RestaurantNavBar'
+import { Base } from 'templates/Base'
 
 const Description = () => (
   <div className="flex m-auto w-2/3 justify-between items-start 0 -mt-11">
@@ -32,12 +32,9 @@ const Description = () => (
 
 export default function RestaurantMenu() {
   return (
-    <main className="bg-gray-100 min-h-screen w-screen">
-      <main className="max-w-screen-2xl m-auto bg-white">
-        <NavBar />
-        <Banner />
-        <Description />
-      </main>
-    </main>
+    <Base>
+      <Banner />
+      <Description />
+    </Base>
   )
 }
