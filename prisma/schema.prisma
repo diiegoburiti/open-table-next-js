@@ -11,7 +11,7 @@ datasource db {
 }
 
 enum PRICE {
-  CREAP
+  CHEAP
   REGULAR
   EXPENSIVE
 }
@@ -19,7 +19,7 @@ model Restaurant {
   id Int @id @default(autoincrement())
   name String
   main_image String
-  image String
+  images String[]
   description String
   open_time String
   close_time String
@@ -30,7 +30,6 @@ model Restaurant {
   location Location @relation(fields: [location_id], references: [id])
   cuisine_id Int
   cuisine Cuisine @relation(fields: [cuisine_id], references: [id])
-
   created_at DateTime @default(now())
   updated_at DateTime @updatedAt
 }
