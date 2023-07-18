@@ -1,7 +1,18 @@
+import { PrismaClient } from '@prisma/client'
 import { Header } from 'components/Header'
 import { RestaurantCard } from 'components/RestaurantCard'
 
-export default function Page() {
+const client = new PrismaClient()
+
+const fetchRestaurants = () => {
+  return client.restaurant.findMany()
+}
+
+export default async function Page() {
+  const restaurants = await fetchRestaurants()
+
+  console.log({ restaurants })
+
   return (
     <main>
       <Header />
